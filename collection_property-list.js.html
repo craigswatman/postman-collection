@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>collection/property-list.js - Postman Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-concepts.html">Postman SDK Concepts</a></li></ul><h3>Classes</h3><ul><li><a href="Collection.html">Collection</a><ul class='methods'><li data-type='method'><a href="Collection.html#.isCollection">isCollection</a></li><li data-type='method'><a href="Collection.html#describe">describe</a></li><li data-type='method'><a href="Collection.html#meta">meta</a></li><li data-type='method'><a href="Collection.html#toJSON">toJSON</a></li></ul></li><li><a href="Cookie.html">Cookie</a><ul class='methods'><li data-type='method'><a href="Cookie.html#.isCookie">isCookie</a></li><li data-type='method'><a href="Cookie.html#.parse">parse</a></li><li data-type='method'><a href="Cookie.html#meta">meta</a></li><li data-type='method'><a href="Cookie.html#toJSON">toJSON</a></li></ul></li><li><a href="Description.html">Description</a><ul class='methods'><li data-type='method'><a href="Description.html#.isDescription">isDescription</a></li><li data-type='method'><a href="Description.html#toJSON">toJSON</a></li><li data-type='method'><a href="Description.html#toString">toString</a></li><li data-type='method'><a href="Description.html#update">update</a></li></ul></li><li><a href="Event.html">Event</a><ul class='methods'><li data-type='method'><a href="Event.html#describe">describe</a></li><li data-type='method'><a href="Event.html#meta">meta</a></li><li data-type='method'><a href="Event.html#toJSON">toJSON</a></li><li data-type='method'><a href="Event.html#update">update</a></li></ul></li><li><a href="EventList.html">EventList</a><ul class='methods'><li data-type='method'><a href="EventList.html#.isEventList">isEventList</a></li><li data-type='method'><a href="EventList.html#add">add</a></li><li data-type='method'><a href="EventList.html#all">all</a></li><li data-type='method'><a href="EventList.html#append">append</a></li><li data-type='method'><a href="EventList.html#clear">clear</a></li><li data-type='method'><a href="EventList.html#count">count</a></li><li data-type='method'><a href="EventList.html#each">each</a></li><li data-type='method'><a href="EventList.html#eachParent">eachParent</a></li><li data-type='method'><a href="EventList.html#filter">filter</a></li><li data-type='method'><a href="EventList.html#find">find</a></li><li data-type='method'><a href="EventList.html#has">has</a></li><li data-type='method'><a href="EventList.html#idx">idx</a></li><li data-type='method'><a href="EventList.html#indexOf">indexOf</a></li><li data-type='method'><a href="EventList.html#insert">insert</a></li><li data-type='method'><a href="EventList.html#insertAfter">insertAfter</a></li><li data-type='method'><a href="EventList.html#listeners">listeners</a></li><li data-type='method'><a href="EventList.html#listenersOwn">listenersOwn</a></li><li data-type='method'><a href="EventList.html#map">map</a></li><li data-type='method'><a href="EventList.html#one">one</a></li><li data-type='method'><a href="EventList.html#populate">populate</a></li><li data-type='method'><a href="EventList.html#prepend">prepend</a></li><li data-type='method'><a href="EventList.html#remove">remove</a></li></ul></li><li><a href="FormParam.html">FormParam</a><ul class='methods'><li data-type='method'><a href="FormParam.html#toString">toString</a></li></ul></li><li><a href="Header.html">Header</a><ul class='methods'><li data-type='method'><a href="Header.html#.create">create</a></li><li data-type='method'><a href="Header.html#.headerValue">headerValue</a></li><li data-type='method'><a href="Header.html#.isHeader">isHeader</a></li><li data-type='method'><a href="Header.html#.parse">parse</a></li><li data-type='method'><a href="Header.html#.parseSingle">parseSingle</a></li><li data-type='method'><a href="Header.html#.size">size</a></li><li data-type='method'><a href="Header.html#.unparse">unparse</a></li><li data-type='method'><a href="Header.html#describe">describe</a></li><li data-type='method'><a href="Header.html#meta">meta</a></li><li data-type='method'><a href="Header.html#toJSON">toJSON</a></li><li data-type='method'><a href="Header.html#toString">toString</a></li><li data-type='method'><a href="Header.html#update">update</a></li></ul></li><li><a href="Item.html">Item</a><ul class='methods'><li data-type='method'><a href="Item.html#.isItem">isItem</a></li><li data-type='method'><a href="Item.html#describe">describe</a></li><li data-type='method'><a href="Item.html#getEvents">getEvents</a></li><li data-type='method'><a href="Item.html#meta">meta</a></li><li data-type='method'><a href="Item.html#toJSON">toJSON</a></li></ul></li><li><a href="ItemGroup.html">ItemGroup</a><ul class='methods'><li data-type='method'><a href="ItemGroup.html#.isItemGroup">isItemGroup</a></li><li data-type='method'><a href="ItemGroup.html#describe">describe</a></li><li data-type='method'><a href="ItemGroup.html#meta">meta</a></li><li data-type='method'><a href="ItemGroup.html#toJSON">toJSON</a></li></ul></li><li><a href="Property.html">Property</a><ul class='methods'><li data-type='method'><a href="Property.html#.replaceSubstitutions">replaceSubstitutions</a></li><li data-type='method'><a href="Property.html#.replaceSubstitutionsIn">replaceSubstitutionsIn</a></li><li data-type='method'><a href="Property.html#describe">describe</a></li><li data-type='method'><a href="Property.html#meta">meta</a></li><li data-type='method'><a href="Property.html#toJSON">toJSON</a></li></ul></li><li><a href="PropertyList.html">PropertyList</a><ul class='methods'><li data-type='method'><a href="PropertyList.html#.isPropertyList">isPropertyList</a></li><li data-type='method'><a href="PropertyList.html#add">add</a></li><li data-type='method'><a href="PropertyList.html#all">all</a></li><li data-type='method'><a href="PropertyList.html#append">append</a></li><li data-type='method'><a href="PropertyList.html#clear">clear</a></li><li data-type='method'><a href="PropertyList.html#count">count</a></li><li data-type='method'><a href="PropertyList.html#each">each</a></li><li data-type='method'><a href="PropertyList.html#eachParent">eachParent</a></li><li data-type='method'><a href="PropertyList.html#filter">filter</a></li><li data-type='method'><a href="PropertyList.html#find">find</a></li><li data-type='method'><a href="PropertyList.html#has">has</a></li><li data-type='method'><a href="PropertyList.html#idx">idx</a></li><li data-type='method'><a href="PropertyList.html#indexOf">indexOf</a></li><li data-type='method'><a href="PropertyList.html#insert">insert</a></li><li data-type='method'><a href="PropertyList.html#insertAfter">insertAfter</a></li><li data-type='method'><a href="PropertyList.html#map">map</a></li><li data-type='method'><a href="PropertyList.html#one">one</a></li><li data-type='method'><a href="PropertyList.html#populate">populate</a></li><li data-type='method'><a href="PropertyList.html#prepend">prepend</a></li><li data-type='method'><a href="PropertyList.html#remove">remove</a></li></ul></li><li><a href="ProxyConfig.html">ProxyConfig</a><ul class='methods'><li data-type='method'><a href="ProxyConfig.html#createMatchPattern">createMatchPattern</a></li><li data-type='method'><a href="ProxyConfig.html#describe">describe</a></li><li data-type='method'><a href="ProxyConfig.html#globPatternToRegexp">globPatternToRegexp</a></li><li data-type='method'><a href="ProxyConfig.html#hostMatched">hostMatched</a></li><li data-type='method'><a href="ProxyConfig.html#matchAbsoluteHostPattern">matchAbsoluteHostPattern</a></li><li data-type='method'><a href="ProxyConfig.html#matchAnyHost">matchAnyHost</a></li><li data-type='method'><a href="ProxyConfig.html#matchSuffixHostPattern">matchSuffixHostPattern</a></li><li data-type='method'><a href="ProxyConfig.html#meta">meta</a></li><li data-type='method'><a href="ProxyConfig.html#pathMatched">pathMatched</a></li><li data-type='method'><a href="ProxyConfig.html#protocolMatched">protocolMatched</a></li><li data-type='method'><a href="ProxyConfig.html#test">test</a></li><li data-type='method'><a href="ProxyConfig.html#toJSON">toJSON</a></li><li data-type='method'><a href="ProxyConfig.html#update">update</a></li></ul></li><li><a href="ProxyConfigList.html">ProxyConfigList</a><ul class='methods'><li data-type='method'><a href="ProxyConfigList.html#.isProxyConfigList">isProxyConfigList</a></li><li data-type='method'><a href="ProxyConfigList.html#add">add</a></li><li data-type='method'><a href="ProxyConfigList.html#all">all</a></li><li data-type='method'><a href="ProxyConfigList.html#append">append</a></li><li data-type='method'><a href="ProxyConfigList.html#clear">clear</a></li><li data-type='method'><a href="ProxyConfigList.html#count">count</a></li><li data-type='method'><a href="ProxyConfigList.html#each">each</a></li><li data-type='method'><a href="ProxyConfigList.html#eachParent">eachParent</a></li><li data-type='method'><a href="ProxyConfigList.html#filter">filter</a></li><li data-type='method'><a href="ProxyConfigList.html#find">find</a></li><li data-type='method'><a href="ProxyConfigList.html#has">has</a></li><li data-type='method'><a href="ProxyConfigList.html#idx">idx</a></li><li data-type='method'><a href="ProxyConfigList.html#indexOf">indexOf</a></li><li data-type='method'><a href="ProxyConfigList.html#insert">insert</a></li><li data-type='method'><a href="ProxyConfigList.html#insertAfter">insertAfter</a></li><li data-type='method'><a href="ProxyConfigList.html#map">map</a></li><li data-type='method'><a href="ProxyConfigList.html#one">one</a></li><li data-type='method'><a href="ProxyConfigList.html#populate">populate</a></li><li data-type='method'><a href="ProxyConfigList.html#prepend">prepend</a></li><li data-type='method'><a href="ProxyConfigList.html#remove">remove</a></li><li data-type='method'><a href="ProxyConfigList.html#resolve">resolve</a></li></ul></li><li><a href="QueryParam.html">QueryParam</a><ul class='methods'><li data-type='method'><a href="QueryParam.html#.parse">parse</a></li><li data-type='method'><a href="QueryParam.html#.parseSingle">parseSingle</a></li><li data-type='method'><a href="QueryParam.html#.unparse">unparse</a></li><li data-type='method'><a href="QueryParam.html#.unparseSingle">unparseSingle</a></li><li data-type='method'><a href="QueryParam.html#describe">describe</a></li><li data-type='method'><a href="QueryParam.html#meta">meta</a></li><li data-type='method'><a href="QueryParam.html#toJSON">toJSON</a></li><li data-type='method'><a href="QueryParam.html#toString">toString</a></li><li data-type='method'><a href="QueryParam.html#update">update</a></li></ul></li><li><a href="Request.html">Request</a><ul class='methods'><li data-type='method'><a href="Request.html#addHeader">addHeader</a></li><li data-type='method'><a href="Request.html#addQueryParams">addQueryParams</a></li><li data-type='method'><a href="Request.html#authorize">authorize</a></li><li data-type='method'><a href="Request.html#clone">clone</a></li><li data-type='method'><a href="Request.html#describe">describe</a></li><li data-type='method'><a href="Request.html#forEachHeader">forEachHeader</a></li><li data-type='method'><a href="Request.html#getHeaders">getHeaders</a></li><li data-type='method'><a href="Request.html#meta">meta</a></li><li data-type='method'><a href="Request.html#removeHeader">removeHeader</a></li><li data-type='method'><a href="Request.html#removeQueryParams">removeQueryParams</a></li><li data-type='method'><a href="Request.html#toJSON">toJSON</a></li><li data-type='method'><a href="Request.html#upsertHeader">upsertHeader</a></li></ul></li><li><a href="RequestAuth.html">RequestAuth</a><ul class='methods'><li data-type='method'><a href="RequestAuth.html#.authorize">authorize</a></li><li data-type='method'><a href="RequestAuth.html#describe">describe</a></li><li data-type='method'><a href="RequestAuth.html#meta">meta</a></li><li data-type='method'><a href="RequestAuth.html#toJSON">toJSON</a></li><li data-type='method'><a href="RequestAuth.html#update">update</a></li><li data-type='method'><a href="RequestAuth.html#use">use</a></li></ul></li><li><a href="RequestBody.html">RequestBody</a><ul class='methods'><li data-type='method'><a href="RequestBody.html#isEmpty">isEmpty</a></li><li data-type='method'><a href="RequestBody.html#meta">meta</a></li><li data-type='method'><a href="RequestBody.html#toJSON">toJSON</a></li><li data-type='method'><a href="RequestBody.html#toString">toString</a></li><li data-type='method'><a href="RequestBody.html#update">update</a></li></ul></li><li><a href="Response.html">Response</a><ul class='methods'><li data-type='method'><a href="Response.html#.createFromNode">createFromNode</a></li><li data-type='method'><a href="Response.html#dataURI">dataURI</a></li><li data-type='method'><a href="Response.html#describe">describe</a></li><li data-type='method'><a href="Response.html#json">json</a></li><li data-type='method'><a href="Response.html#meta">meta</a></li><li data-type='method'><a href="Response.html#reason">reason</a></li><li data-type='method'><a href="Response.html#size">size</a></li><li data-type='method'><a href="Response.html#text">text</a></li><li data-type='method'><a href="Response.html#toJSON">toJSON</a></li></ul></li><li><a href="Script.html">Script</a><ul class='methods'><li data-type='method'><a href="Script.html#describe">describe</a></li><li data-type='method'><a href="Script.html#meta">meta</a></li><li data-type='method'><a href="Script.html#toJSON">toJSON</a></li><li data-type='method'><a href="Script.html#toSource">toSource</a></li></ul></li><li><a href="Url.html">Url</a><ul class='methods'><li data-type='method'><a href="Url.html#.isUrl">isUrl</a></li><li data-type='method'><a href="Url.html#.parse">parse</a></li><li data-type='method'><a href="Url.html#addQueryParams">addQueryParams</a></li><li data-type='method'><a href="Url.html#getHost">getHost</a></li><li data-type='method'><a href="Url.html#getOAuth1BaseUrl">getOAuth1BaseUrl</a></li><li data-type='method'><a href="Url.html#getPath">getPath</a></li><li data-type='method'><a href="Url.html#getPathWithQuery">getPathWithQuery</a></li><li data-type='method'><a href="Url.html#getQueryString">getQueryString</a></li><li data-type='method'><a href="Url.html#getRaw">getRaw</a></li><li data-type='method'><a href="Url.html#getRemote">getRemote</a></li><li data-type='method'><a href="Url.html#meta">meta</a></li><li data-type='method'><a href="Url.html#removeQueryParams">removeQueryParams</a></li><li data-type='method'><a href="Url.html#toJSON">toJSON</a></li><li data-type='method'><a href="Url.html#toString">toString</a></li><li data-type='method'><a href="Url.html#update">update</a></li></ul></li><li><a href="Variable.html">Variable</a><ul class='methods'><li data-type='method'><a href="Variable.html#.isVariable">isVariable</a></li><li data-type='method'><a href="Variable.html#cast">cast</a></li><li data-type='method'><a href="Variable.html#describe">describe</a></li><li data-type='method'><a href="Variable.html#get">get</a></li><li data-type='method'><a href="Variable.html#meta">meta</a></li><li data-type='method'><a href="Variable.html#set">set</a></li><li data-type='method'><a href="Variable.html#toJSON">toJSON</a></li><li data-type='method'><a href="Variable.html#toString">toString</a></li><li data-type='method'><a href="Variable.html#update">update</a></li><li data-type='method'><a href="Variable.html#valueOf">valueOf</a></li><li data-type='method'><a href="Variable.html#valueType">valueType</a></li></ul></li><li><a href="VariableList.html">VariableList</a><ul class='methods'><li data-type='method'><a href="VariableList.html#.isVariableList">isVariableList</a></li><li data-type='method'><a href="VariableList.html#add">add</a></li><li data-type='method'><a href="VariableList.html#all">all</a></li><li data-type='method'><a href="VariableList.html#append">append</a></li><li data-type='method'><a href="VariableList.html#clear">clear</a></li><li data-type='method'><a href="VariableList.html#count">count</a></li><li data-type='method'><a href="VariableList.html#each">each</a></li><li data-type='method'><a href="VariableList.html#eachParent">eachParent</a></li><li data-type='method'><a href="VariableList.html#filter">filter</a></li><li data-type='method'><a href="VariableList.html#find">find</a></li><li data-type='method'><a href="VariableList.html#has">has</a></li><li data-type='method'><a href="VariableList.html#idx">idx</a></li><li data-type='method'><a href="VariableList.html#indexOf">indexOf</a></li><li data-type='method'><a href="VariableList.html#insert">insert</a></li><li data-type='method'><a href="VariableList.html#insertAfter">insertAfter</a></li><li data-type='method'><a href="VariableList.html#map">map</a></li><li data-type='method'><a href="VariableList.html#one">one</a></li><li data-type='method'><a href="VariableList.html#populate">populate</a></li><li data-type='method'><a href="VariableList.html#prepend">prepend</a></li><li data-type='method'><a href="VariableList.html#remove">remove</a></li><li data-type='method'><a href="VariableList.html#replace">replace</a></li><li data-type='method'><a href="VariableList.html#substitute">substitute</a></li><li data-type='method'><a href="VariableList.html#syncFromObject">syncFromObject</a></li><li data-type='method'><a href="VariableList.html#syncToObject">syncToObject</a></li></ul></li><li><a href="VariableScope.html">VariableScope</a><ul class='methods'><li data-type='method'><a href="VariableScope.html#.isVariableScope">isVariableScope</a></li><li data-type='method'><a href="VariableScope.html#describe">describe</a></li><li data-type='method'><a href="VariableScope.html#meta">meta</a></li><li data-type='method'><a href="VariableScope.html#syncVariablesFrom">syncVariablesFrom</a></li><li data-type='method'><a href="VariableScope.html#syncVariablesTo">syncVariablesTo</a></li><li data-type='method'><a href="VariableScope.html#toJSON">toJSON</a></li></ul></li><li><a href="Version.html">Version</a><ul class='methods'><li data-type='method'><a href="Version.html#meta">meta</a></li><li data-type='method'><a href="Version.html#set">set</a></li><li data-type='method'><a href="Version.html#toJSON">toJSON</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#syncVariablesFrom">syncVariablesFrom</a></li><li><a href="global.html#syncVariablesTo">syncVariablesTo</a></li><li><a href="global.html#toJSON">toJSON</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">collection/property-list.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var _ = require('../util').lodash,
+    PropertyBase = require('./property-base').PropertyBase,
+
+    __PARENT = '__parent',
+    DEFAULT_INDEX_ATTR = 'id',
+    DEFAULT_INDEXCASE_ATTR = false,
+
+    PropertyList;
+
+_.inherit((
+
+    /**
+     * @constructor
+     *
+     * @todo
+     * - document stuff
+     */
+    PropertyList = function PostmanPropertyList (type, parent, populate) {
+        // @todo add this test sometime later
+        // if (!type) {
+        //     throw new Error('postman-collection: cannot initialise a list without a type parameter');
+        // }
+
+        PropertyList.super_.call(this); // call super with appropriate options
+
+        _.assignLocked(this, __PARENT, parent); // save reference to parent
+        _.assign(this, /** @lends PropertyList.prototype */ {
+            /**
+             * @private
+             * @type {Array}
+             */
+            members: this.members || [],
+
+            /**
+             * @private
+             * @type {Object}
+             */
+            reference: this.reference || {},
+
+            /**
+             * @private
+             * @type {Function}
+             */
+            Type: type
+        });
+
+        // if the type this list holds has its own index key, then use the same
+        _.getOwn(type, '_postman_propertyIndexKey') &amp;&amp; (this._postman_listIndexKey = type._postman_propertyIndexKey);
+
+        // if the type has case sensitivity flags, set the same
+        _.getOwn(type, '_postman_propertyIndexCaseInsensitive') &amp;&amp; (this._postman_listIndexCaseInsensitive =
+            type._postman_propertyIndexCaseInsensitive);
+
+        // prepopulate
+        populate &amp;&amp; this.populate(populate);
+    }), PropertyBase);
+
+_.assign(PropertyList.prototype, /** @lends PropertyList.prototype */ {
+
+    /**
+     * Indicates that this element contains a number of other elements.
+     * @private
+     */
+    _postman_propertyIsList: true,
+
+    /**
+     * Holds the attribute to index this PropertyList by. Default: 'id'
+     *
+     * @private
+     * @type {String}
+     */
+    _postman_listIndexKey: DEFAULT_INDEX_ATTR,
+
+    /**
+     * Holds the attribute whether indexing of this list is case sensitive or not
+     *
+     * @private
+     * @type {String}
+     */
+    _postman_listIndexCaseInsensitive: DEFAULT_INDEXCASE_ATTR,
+
+    /**
+     * Insert an element at the end of this list. When a reference member specified via second parameter is found, the
+     * member is inserted at an index before the reference member.
+     *
+     * @param {PropertyList.Type} item
+     * @param {PropertyList.Type|String} [before]
+     */
+    insert: function (item, before) {
+        if (!_.isObject(item)) { return; } // do not proceed on empty param
+
+        var duplicate = this.indexOf(item),
+            index;
+
+        // remove from previous list
+        PropertyList.isPropertyList(item[__PARENT]) &amp;&amp; (item[__PARENT] !== this) &amp;&amp; item[__PARENT].remove(item);
+        // inject the parent reference
+        _.assignHidden(item, __PARENT, this);
+
+        // ensure that we do not double insert things into member array
+        (duplicate > -1) &amp;&amp; this.members.splice(duplicate, 1);
+        // find the position of the reference element
+        before &amp;&amp; (before = this.indexOf(before));
+
+        // inject to the members array ata position or at the end in case no item is there for reference
+        (before > -1) ? this.members.splice(before, 0, item) : this.members.push(item);
+
+        // store reference by id, so create the index string. we first ensure that the index value is truthy and then
+        // recheck that the string conversion of the same is truthy as well.
+        if ((index = item[this._postman_listIndexKey]) &amp;&amp; (index = String(index))) {
+            // desensitise case, if the property needs it to be
+            this._postman_listIndexCaseInsensitive &amp;&amp; (index = index.toLowerCase());
+            this.reference[index] = item;
+        }
+    },
+
+    /**
+     * Insert an element at the end of this list. When a reference member specified via second parameter is found, the
+     * member is inserted at an index after the reference member.
+     *
+     * @param {PropertyList.Type} item
+     * @param {PropertyList.Type|String} [after]
+     */
+    insertAfter: function (item, after) {
+        // convert item to positional reference
+        return this.insert(item, this.idx(this.indexOf(after) + 1));
+    },
+
+    /**
+     * Adds or moves an item to the end of this list
+     * @param {PropertyList.Type} item
+     */
+    append: function (item) {
+        return this.insert(item);
+    },
+
+    /**
+     * Adds or moves an item to the beginning of this list
+     * @param {PropertyList.Type} item
+     */
+    prepend: function (item) {
+        return this.insert(item, this.idx(0));
+    },
+
+    /**
+     * Add an item or item definition to this list
+     * @param {Object|PropertyList.Type} item
+     *
+     * @todo
+     * - remove item from original parent if already it has a parent
+     * - validate that the original parent's constructor matches this parent's constructor
+     */
+    add: function (item) {
+        // do not proceed on empty param, but empty strings are in fact valid.
+        if (_.isNull(item) || _.isUndefined(item) || _.isNaN(item)) { return; }
+
+        // create new instance of the item based on the type specified if it is not already
+        this.insert((item.constructor === this.Type) ? item :
+            // if the prperty has acreate static function, use it.
+            (_.has(this.Type, 'create') ? this.Type.create.apply(this.Type, arguments) : new this.Type(item)));
+    },
+
+    /**
+     * Removes all elements from the PropertyList for which the predicate returns truthy.
+     * @param predicate {Function|String|Type}
+     * @param context {Object} Optional context to bind the predicate to.
+     */
+    remove: function (predicate, context) {
+        var match; // to be used if predicate is an ID
+
+        !context &amp;&amp; (context = this);
+        // if predicate is id, then create a function to remove that from array
+        if (_.isString(predicate)) {
+            (match = this.one(predicate)) &amp;&amp; (predicate = function (item) {
+                return (item === match);
+            });
+        }
+        // in case an object reference is sent, prepare it for removal
+        else if (predicate instanceof this.Type) {
+            match = predicate;
+            predicate = function (item) {
+                return (item === match);
+            };
+        }
+
+        _.isFunction(predicate) &amp;&amp; _.remove(this.members, function (item) {
+            var index;
+            if (predicate.apply(context, arguments)) {
+                if ((index = item[this._postman_listIndexKey]) &amp;&amp; (index = String(index))) {
+                    this._postman_listIndexCaseInsensitive &amp;&amp; (index = index.toLowerCase());
+                    delete this.reference[index];
+                }
+                delete item[__PARENT]; // unlink from its parent
+                return true;
+            }
+        }.bind(this));
+    },
+
+    /**
+     * Load one or more items
+     *
+     * @param {Object|Array} items
+     */
+    populate: function (items) {
+        // if Type supports parsing of string headers then do it before adding it.
+        _.isString(items) &amp;&amp; _.isFunction(this.Type.parse) &amp;&amp; (items = this.Type.parse(items));
+        // add a single item or an array of items.
+        _.forEach(_.isArray(items) ? items :
+            // if population is not an array, we send this as single item in an array or send each property separately
+            // if the core Type supports Type.create
+            ((_.isPlainObject(items) &amp;&amp; _.has(this.Type, 'create')) ? items : [items]), this.add.bind(this));
+    },
+
+    /**
+     * Removes all items in the list
+     */
+    clear: function () {
+        this.each(this.remove.bind(this));
+    },
+
+    /**
+     * Returns a map of all items
+     * @returns {Object}
+     */
+    all: function () {
+        return _.clone(this.members);
+    },
+
+    /**
+     * Get Item in this list by `ID` reference
+     *
+     * @param {String} id
+     * @returns {PropertyList.Type}
+     */
+    one: function (id) {
+        return this.reference[this._postman_listIndexCaseInsensitive ? String(id).toLowerCase() : id];
+    },
+
+    /**
+     * Iterate on each item of this list
+     */
+    each: function (iterator, context) {
+        _.forEach(this.members, _.isFunction(iterator) ? iterator.bind(context || this.__parent) : iterator);
+    },
+
+    /**
+     * @param {Function} rule
+     */
+    filter: function (rule, context) {
+        return _.filter(this.members, _.isFunction(rule) &amp;&amp; _.isObject(context) ? rule.bind(context) : rule);
+    },
+
+    /**
+     * Find an item within the item group
+     *
+     * @param {Function} rule
+     * @param {Object} [context]
+     * @returns {Item|ItemGroup}
+     */
+    find: function (rule, context) {
+        return _.find(this.members, _.isFunction(rule) &amp;&amp; _.isObject(context) ? rule.bind(context) : rule);
+    },
+
+    /**
+     * Iterates over the property list.
+     *
+     * @param iterator {Function} Function to call on each item.
+     * @param context Optional context, defaults to the PropertyList itself.
+     */
+    map: function (iterator, context) {
+        return _.map(this.members, _.isFunction(iterator) ? iterator.bind(context || this) : iterator);
+    },
+
+    /**
+     * Returns the length of the PropertyList
+     *
+     * @returns {Number}
+     */
+    count: function () {
+        return this.members.length;
+    },
+
+    /**
+     * Get a member of this list by it's index
+     *
+     * @param {Number} index
+     * @returns {PropertyList.Type}
+     */
+    idx: function (index) {
+        return this.members[index];
+    },
+
+    /**
+     * Find the index of an item in this list
+     *
+     * @param {String|Object} item
+     * @returns {Number}
+     */
+    indexOf: function (item) {
+        return this.members.indexOf(_.isString(item) ? (item = this.one(item)) : item);
+    },
+
+    /**
+     * Check whether an item exists in this list
+     *
+     * @param {String|PropertyList.Type} item
+     * @returns {Boolean}
+     */
+    has: function (item) {
+        return Boolean(_.isString(item) ? this.one(item) : this.filter(function (member) {
+            return member === item;
+        }).length);
+    },
+
+    /**
+     * Iterates over all parents of the property list
+     *
+     * @param {Function} iterator
+     * @param {Object=} [context]
+     */
+    eachParent: function (iterator, context) {
+        // validate parameters
+        if (!_.isFunction(iterator)) { return; }
+        !context &amp;&amp; (context = this);
+
+        var parent = this.__parent,
+            prev;
+
+        // iterate till there is no parent
+        while (parent) {
+            // call iterator with the parent and previous parent
+            iterator.call(context, parent, prev);
+
+            // update references
+            prev = parent;
+            parent = parent.__parent;
+        }
+    },
+
+    toJSON: function () {
+        if (!this.count()) {
+            return [];
+        }
+
+        return _.map(this.members, function (member) {
+            return _.reduce(member, function (accumulator, value, key) {
+                if (value === undefined) { // true/false/null need to be preserved.
+                    return accumulator;
+                }
+
+                // Handle plurality of PropertyLists in the SDK vs the exported JSON.
+                // Basically, removes the trailing "s" from key if the value is a property list.
+                if (value &amp;&amp; value._postman_propertyIsList &amp;&amp; _.endsWith(key, 's')) {
+                    key = key.slice(0, -1);
+                }
+
+                // Handle 'PropertyBase's
+                if (value &amp;&amp; _.isFunction(value.toJSON)) {
+                    accumulator[key] = value.toJSON();
+                    return accumulator;
+                }
+
+                // Handle Strings
+                if (_.isString(value)) {
+                    accumulator[key] = value;
+                    return accumulator;
+                }
+
+                // Everything else
+                accumulator[key] = _.cloneElement(value);
+                return accumulator;
+            }, {});
+        });
+    }
+});
+
+_.assign(PropertyList, /** @lends PropertyList */ {
+    /**
+     * Defines the name of this property for internal use.
+     * @private
+     * @readOnly
+     * @type {String}
+     */
+    _postman_propertyName: 'PropertyList',
+
+    /**
+     * Checks whether an object is a PropertyList
+     *
+     * @param {*} obj
+     * @returns {Boolean}
+     */
+    isPropertyList: function (obj) {
+        return obj &amp;&amp; ((obj instanceof PropertyList) ||
+            _.inSuperChain(obj.constructor, '_postman_propertyName', PropertyList._postman_propertyName));
+    }
+});
+
+module.exports = {
+    PropertyList: PropertyList
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated at Thu Feb 16 2017 14:01:15 GMT+0000 (UTC)
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

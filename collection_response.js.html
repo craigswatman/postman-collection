@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>collection/response.js - Postman Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-concepts.html">Postman SDK Concepts</a></li></ul><h3>Classes</h3><ul><li><a href="Collection.html">Collection</a><ul class='methods'><li data-type='method'><a href="Collection.html#.isCollection">isCollection</a></li><li data-type='method'><a href="Collection.html#describe">describe</a></li><li data-type='method'><a href="Collection.html#meta">meta</a></li><li data-type='method'><a href="Collection.html#toJSON">toJSON</a></li></ul></li><li><a href="Cookie.html">Cookie</a><ul class='methods'><li data-type='method'><a href="Cookie.html#.isCookie">isCookie</a></li><li data-type='method'><a href="Cookie.html#.parse">parse</a></li><li data-type='method'><a href="Cookie.html#meta">meta</a></li><li data-type='method'><a href="Cookie.html#toJSON">toJSON</a></li></ul></li><li><a href="Description.html">Description</a><ul class='methods'><li data-type='method'><a href="Description.html#.isDescription">isDescription</a></li><li data-type='method'><a href="Description.html#toJSON">toJSON</a></li><li data-type='method'><a href="Description.html#toString">toString</a></li><li data-type='method'><a href="Description.html#update">update</a></li></ul></li><li><a href="Event.html">Event</a><ul class='methods'><li data-type='method'><a href="Event.html#describe">describe</a></li><li data-type='method'><a href="Event.html#meta">meta</a></li><li data-type='method'><a href="Event.html#toJSON">toJSON</a></li><li data-type='method'><a href="Event.html#update">update</a></li></ul></li><li><a href="EventList.html">EventList</a><ul class='methods'><li data-type='method'><a href="EventList.html#.isEventList">isEventList</a></li><li data-type='method'><a href="EventList.html#add">add</a></li><li data-type='method'><a href="EventList.html#all">all</a></li><li data-type='method'><a href="EventList.html#append">append</a></li><li data-type='method'><a href="EventList.html#clear">clear</a></li><li data-type='method'><a href="EventList.html#count">count</a></li><li data-type='method'><a href="EventList.html#each">each</a></li><li data-type='method'><a href="EventList.html#eachParent">eachParent</a></li><li data-type='method'><a href="EventList.html#filter">filter</a></li><li data-type='method'><a href="EventList.html#find">find</a></li><li data-type='method'><a href="EventList.html#has">has</a></li><li data-type='method'><a href="EventList.html#idx">idx</a></li><li data-type='method'><a href="EventList.html#indexOf">indexOf</a></li><li data-type='method'><a href="EventList.html#insert">insert</a></li><li data-type='method'><a href="EventList.html#insertAfter">insertAfter</a></li><li data-type='method'><a href="EventList.html#listeners">listeners</a></li><li data-type='method'><a href="EventList.html#listenersOwn">listenersOwn</a></li><li data-type='method'><a href="EventList.html#map">map</a></li><li data-type='method'><a href="EventList.html#one">one</a></li><li data-type='method'><a href="EventList.html#populate">populate</a></li><li data-type='method'><a href="EventList.html#prepend">prepend</a></li><li data-type='method'><a href="EventList.html#remove">remove</a></li></ul></li><li><a href="FormParam.html">FormParam</a><ul class='methods'><li data-type='method'><a href="FormParam.html#toString">toString</a></li></ul></li><li><a href="Header.html">Header</a><ul class='methods'><li data-type='method'><a href="Header.html#.create">create</a></li><li data-type='method'><a href="Header.html#.headerValue">headerValue</a></li><li data-type='method'><a href="Header.html#.isHeader">isHeader</a></li><li data-type='method'><a href="Header.html#.parse">parse</a></li><li data-type='method'><a href="Header.html#.parseSingle">parseSingle</a></li><li data-type='method'><a href="Header.html#.size">size</a></li><li data-type='method'><a href="Header.html#.unparse">unparse</a></li><li data-type='method'><a href="Header.html#describe">describe</a></li><li data-type='method'><a href="Header.html#meta">meta</a></li><li data-type='method'><a href="Header.html#toJSON">toJSON</a></li><li data-type='method'><a href="Header.html#toString">toString</a></li><li data-type='method'><a href="Header.html#update">update</a></li></ul></li><li><a href="Item.html">Item</a><ul class='methods'><li data-type='method'><a href="Item.html#.isItem">isItem</a></li><li data-type='method'><a href="Item.html#describe">describe</a></li><li data-type='method'><a href="Item.html#getEvents">getEvents</a></li><li data-type='method'><a href="Item.html#meta">meta</a></li><li data-type='method'><a href="Item.html#toJSON">toJSON</a></li></ul></li><li><a href="ItemGroup.html">ItemGroup</a><ul class='methods'><li data-type='method'><a href="ItemGroup.html#.isItemGroup">isItemGroup</a></li><li data-type='method'><a href="ItemGroup.html#describe">describe</a></li><li data-type='method'><a href="ItemGroup.html#meta">meta</a></li><li data-type='method'><a href="ItemGroup.html#toJSON">toJSON</a></li></ul></li><li><a href="Property.html">Property</a><ul class='methods'><li data-type='method'><a href="Property.html#.replaceSubstitutions">replaceSubstitutions</a></li><li data-type='method'><a href="Property.html#.replaceSubstitutionsIn">replaceSubstitutionsIn</a></li><li data-type='method'><a href="Property.html#describe">describe</a></li><li data-type='method'><a href="Property.html#meta">meta</a></li><li data-type='method'><a href="Property.html#toJSON">toJSON</a></li></ul></li><li><a href="PropertyList.html">PropertyList</a><ul class='methods'><li data-type='method'><a href="PropertyList.html#.isPropertyList">isPropertyList</a></li><li data-type='method'><a href="PropertyList.html#add">add</a></li><li data-type='method'><a href="PropertyList.html#all">all</a></li><li data-type='method'><a href="PropertyList.html#append">append</a></li><li data-type='method'><a href="PropertyList.html#clear">clear</a></li><li data-type='method'><a href="PropertyList.html#count">count</a></li><li data-type='method'><a href="PropertyList.html#each">each</a></li><li data-type='method'><a href="PropertyList.html#eachParent">eachParent</a></li><li data-type='method'><a href="PropertyList.html#filter">filter</a></li><li data-type='method'><a href="PropertyList.html#find">find</a></li><li data-type='method'><a href="PropertyList.html#has">has</a></li><li data-type='method'><a href="PropertyList.html#idx">idx</a></li><li data-type='method'><a href="PropertyList.html#indexOf">indexOf</a></li><li data-type='method'><a href="PropertyList.html#insert">insert</a></li><li data-type='method'><a href="PropertyList.html#insertAfter">insertAfter</a></li><li data-type='method'><a href="PropertyList.html#map">map</a></li><li data-type='method'><a href="PropertyList.html#one">one</a></li><li data-type='method'><a href="PropertyList.html#populate">populate</a></li><li data-type='method'><a href="PropertyList.html#prepend">prepend</a></li><li data-type='method'><a href="PropertyList.html#remove">remove</a></li></ul></li><li><a href="ProxyConfig.html">ProxyConfig</a><ul class='methods'><li data-type='method'><a href="ProxyConfig.html#createMatchPattern">createMatchPattern</a></li><li data-type='method'><a href="ProxyConfig.html#describe">describe</a></li><li data-type='method'><a href="ProxyConfig.html#globPatternToRegexp">globPatternToRegexp</a></li><li data-type='method'><a href="ProxyConfig.html#hostMatched">hostMatched</a></li><li data-type='method'><a href="ProxyConfig.html#matchAbsoluteHostPattern">matchAbsoluteHostPattern</a></li><li data-type='method'><a href="ProxyConfig.html#matchAnyHost">matchAnyHost</a></li><li data-type='method'><a href="ProxyConfig.html#matchSuffixHostPattern">matchSuffixHostPattern</a></li><li data-type='method'><a href="ProxyConfig.html#meta">meta</a></li><li data-type='method'><a href="ProxyConfig.html#pathMatched">pathMatched</a></li><li data-type='method'><a href="ProxyConfig.html#protocolMatched">protocolMatched</a></li><li data-type='method'><a href="ProxyConfig.html#test">test</a></li><li data-type='method'><a href="ProxyConfig.html#toJSON">toJSON</a></li><li data-type='method'><a href="ProxyConfig.html#update">update</a></li></ul></li><li><a href="ProxyConfigList.html">ProxyConfigList</a><ul class='methods'><li data-type='method'><a href="ProxyConfigList.html#.isProxyConfigList">isProxyConfigList</a></li><li data-type='method'><a href="ProxyConfigList.html#add">add</a></li><li data-type='method'><a href="ProxyConfigList.html#all">all</a></li><li data-type='method'><a href="ProxyConfigList.html#append">append</a></li><li data-type='method'><a href="ProxyConfigList.html#clear">clear</a></li><li data-type='method'><a href="ProxyConfigList.html#count">count</a></li><li data-type='method'><a href="ProxyConfigList.html#each">each</a></li><li data-type='method'><a href="ProxyConfigList.html#eachParent">eachParent</a></li><li data-type='method'><a href="ProxyConfigList.html#filter">filter</a></li><li data-type='method'><a href="ProxyConfigList.html#find">find</a></li><li data-type='method'><a href="ProxyConfigList.html#has">has</a></li><li data-type='method'><a href="ProxyConfigList.html#idx">idx</a></li><li data-type='method'><a href="ProxyConfigList.html#indexOf">indexOf</a></li><li data-type='method'><a href="ProxyConfigList.html#insert">insert</a></li><li data-type='method'><a href="ProxyConfigList.html#insertAfter">insertAfter</a></li><li data-type='method'><a href="ProxyConfigList.html#map">map</a></li><li data-type='method'><a href="ProxyConfigList.html#one">one</a></li><li data-type='method'><a href="ProxyConfigList.html#populate">populate</a></li><li data-type='method'><a href="ProxyConfigList.html#prepend">prepend</a></li><li data-type='method'><a href="ProxyConfigList.html#remove">remove</a></li><li data-type='method'><a href="ProxyConfigList.html#resolve">resolve</a></li></ul></li><li><a href="QueryParam.html">QueryParam</a><ul class='methods'><li data-type='method'><a href="QueryParam.html#.parse">parse</a></li><li data-type='method'><a href="QueryParam.html#.parseSingle">parseSingle</a></li><li data-type='method'><a href="QueryParam.html#.unparse">unparse</a></li><li data-type='method'><a href="QueryParam.html#.unparseSingle">unparseSingle</a></li><li data-type='method'><a href="QueryParam.html#describe">describe</a></li><li data-type='method'><a href="QueryParam.html#meta">meta</a></li><li data-type='method'><a href="QueryParam.html#toJSON">toJSON</a></li><li data-type='method'><a href="QueryParam.html#toString">toString</a></li><li data-type='method'><a href="QueryParam.html#update">update</a></li></ul></li><li><a href="Request.html">Request</a><ul class='methods'><li data-type='method'><a href="Request.html#addHeader">addHeader</a></li><li data-type='method'><a href="Request.html#addQueryParams">addQueryParams</a></li><li data-type='method'><a href="Request.html#authorize">authorize</a></li><li data-type='method'><a href="Request.html#clone">clone</a></li><li data-type='method'><a href="Request.html#describe">describe</a></li><li data-type='method'><a href="Request.html#forEachHeader">forEachHeader</a></li><li data-type='method'><a href="Request.html#getHeaders">getHeaders</a></li><li data-type='method'><a href="Request.html#meta">meta</a></li><li data-type='method'><a href="Request.html#removeHeader">removeHeader</a></li><li data-type='method'><a href="Request.html#removeQueryParams">removeQueryParams</a></li><li data-type='method'><a href="Request.html#toJSON">toJSON</a></li><li data-type='method'><a href="Request.html#upsertHeader">upsertHeader</a></li></ul></li><li><a href="RequestAuth.html">RequestAuth</a><ul class='methods'><li data-type='method'><a href="RequestAuth.html#.authorize">authorize</a></li><li data-type='method'><a href="RequestAuth.html#describe">describe</a></li><li data-type='method'><a href="RequestAuth.html#meta">meta</a></li><li data-type='method'><a href="RequestAuth.html#toJSON">toJSON</a></li><li data-type='method'><a href="RequestAuth.html#update">update</a></li><li data-type='method'><a href="RequestAuth.html#use">use</a></li></ul></li><li><a href="RequestBody.html">RequestBody</a><ul class='methods'><li data-type='method'><a href="RequestBody.html#isEmpty">isEmpty</a></li><li data-type='method'><a href="RequestBody.html#meta">meta</a></li><li data-type='method'><a href="RequestBody.html#toJSON">toJSON</a></li><li data-type='method'><a href="RequestBody.html#toString">toString</a></li><li data-type='method'><a href="RequestBody.html#update">update</a></li></ul></li><li><a href="Response.html">Response</a><ul class='methods'><li data-type='method'><a href="Response.html#.createFromNode">createFromNode</a></li><li data-type='method'><a href="Response.html#dataURI">dataURI</a></li><li data-type='method'><a href="Response.html#describe">describe</a></li><li data-type='method'><a href="Response.html#json">json</a></li><li data-type='method'><a href="Response.html#meta">meta</a></li><li data-type='method'><a href="Response.html#reason">reason</a></li><li data-type='method'><a href="Response.html#size">size</a></li><li data-type='method'><a href="Response.html#text">text</a></li><li data-type='method'><a href="Response.html#toJSON">toJSON</a></li></ul></li><li><a href="Script.html">Script</a><ul class='methods'><li data-type='method'><a href="Script.html#describe">describe</a></li><li data-type='method'><a href="Script.html#meta">meta</a></li><li data-type='method'><a href="Script.html#toJSON">toJSON</a></li><li data-type='method'><a href="Script.html#toSource">toSource</a></li></ul></li><li><a href="Url.html">Url</a><ul class='methods'><li data-type='method'><a href="Url.html#.isUrl">isUrl</a></li><li data-type='method'><a href="Url.html#.parse">parse</a></li><li data-type='method'><a href="Url.html#addQueryParams">addQueryParams</a></li><li data-type='method'><a href="Url.html#getHost">getHost</a></li><li data-type='method'><a href="Url.html#getOAuth1BaseUrl">getOAuth1BaseUrl</a></li><li data-type='method'><a href="Url.html#getPath">getPath</a></li><li data-type='method'><a href="Url.html#getPathWithQuery">getPathWithQuery</a></li><li data-type='method'><a href="Url.html#getQueryString">getQueryString</a></li><li data-type='method'><a href="Url.html#getRaw">getRaw</a></li><li data-type='method'><a href="Url.html#getRemote">getRemote</a></li><li data-type='method'><a href="Url.html#meta">meta</a></li><li data-type='method'><a href="Url.html#removeQueryParams">removeQueryParams</a></li><li data-type='method'><a href="Url.html#toJSON">toJSON</a></li><li data-type='method'><a href="Url.html#toString">toString</a></li><li data-type='method'><a href="Url.html#update">update</a></li></ul></li><li><a href="Variable.html">Variable</a><ul class='methods'><li data-type='method'><a href="Variable.html#.isVariable">isVariable</a></li><li data-type='method'><a href="Variable.html#cast">cast</a></li><li data-type='method'><a href="Variable.html#describe">describe</a></li><li data-type='method'><a href="Variable.html#get">get</a></li><li data-type='method'><a href="Variable.html#meta">meta</a></li><li data-type='method'><a href="Variable.html#set">set</a></li><li data-type='method'><a href="Variable.html#toJSON">toJSON</a></li><li data-type='method'><a href="Variable.html#toString">toString</a></li><li data-type='method'><a href="Variable.html#update">update</a></li><li data-type='method'><a href="Variable.html#valueOf">valueOf</a></li><li data-type='method'><a href="Variable.html#valueType">valueType</a></li></ul></li><li><a href="VariableList.html">VariableList</a><ul class='methods'><li data-type='method'><a href="VariableList.html#.isVariableList">isVariableList</a></li><li data-type='method'><a href="VariableList.html#add">add</a></li><li data-type='method'><a href="VariableList.html#all">all</a></li><li data-type='method'><a href="VariableList.html#append">append</a></li><li data-type='method'><a href="VariableList.html#clear">clear</a></li><li data-type='method'><a href="VariableList.html#count">count</a></li><li data-type='method'><a href="VariableList.html#each">each</a></li><li data-type='method'><a href="VariableList.html#eachParent">eachParent</a></li><li data-type='method'><a href="VariableList.html#filter">filter</a></li><li data-type='method'><a href="VariableList.html#find">find</a></li><li data-type='method'><a href="VariableList.html#has">has</a></li><li data-type='method'><a href="VariableList.html#idx">idx</a></li><li data-type='method'><a href="VariableList.html#indexOf">indexOf</a></li><li data-type='method'><a href="VariableList.html#insert">insert</a></li><li data-type='method'><a href="VariableList.html#insertAfter">insertAfter</a></li><li data-type='method'><a href="VariableList.html#map">map</a></li><li data-type='method'><a href="VariableList.html#one">one</a></li><li data-type='method'><a href="VariableList.html#populate">populate</a></li><li data-type='method'><a href="VariableList.html#prepend">prepend</a></li><li data-type='method'><a href="VariableList.html#remove">remove</a></li><li data-type='method'><a href="VariableList.html#replace">replace</a></li><li data-type='method'><a href="VariableList.html#substitute">substitute</a></li><li data-type='method'><a href="VariableList.html#syncFromObject">syncFromObject</a></li><li data-type='method'><a href="VariableList.html#syncToObject">syncToObject</a></li></ul></li><li><a href="VariableScope.html">VariableScope</a><ul class='methods'><li data-type='method'><a href="VariableScope.html#.isVariableScope">isVariableScope</a></li><li data-type='method'><a href="VariableScope.html#describe">describe</a></li><li data-type='method'><a href="VariableScope.html#meta">meta</a></li><li data-type='method'><a href="VariableScope.html#syncVariablesFrom">syncVariablesFrom</a></li><li data-type='method'><a href="VariableScope.html#syncVariablesTo">syncVariablesTo</a></li><li data-type='method'><a href="VariableScope.html#toJSON">toJSON</a></li></ul></li><li><a href="Version.html">Version</a><ul class='methods'><li data-type='method'><a href="Version.html#meta">meta</a></li><li data-type='method'><a href="Version.html#set">set</a></li><li data-type='method'><a href="Version.html#toJSON">toJSON</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#syncVariablesFrom">syncVariablesFrom</a></li><li><a href="global.html#syncVariablesTo">syncVariablesTo</a></li><li><a href="global.html#toJSON">toJSON</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">collection/response.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var util = require('../util'),
+    _ = util.lodash,
+    fileType = require('file-type'),
+    mimeType = require('mime-types'),
+    mimeFormat = require('mime-format'),
+    httpReasons = require('http-reasons'),
+    LJSON = require('liquid-json'),
+    Property = require('./property').Property,
+    Request = require('./request').Request,
+    Header = require('./header').Header,
+    Cookie = require('./cookie').Cookie,
+    PropertyList = require('./property-list').PropertyList,
+
+    /**
+     * @private
+     * @const
+     * @type {string}
+     */
+    E = '',
+
+    /**
+     * @private
+     * @const
+     * @type {string}
+     */
+    DOT = '.',
+
+    /**
+     * @private
+     * @const
+     * @type {String}
+     */
+    HEADER = 'header',
+
+    /**
+     * @private
+     * @const
+     * @type {String}
+     */
+    BODY = 'body',
+
+    /**
+     * @private
+     * @const
+     * @type {String}
+     */
+    GZIP = 'gzip',
+
+    /**
+     * @private
+     * @const
+     * @type {String}
+     */
+    CONTENT_ENCODING = 'Content-Encoding',
+
+    /**
+     * @private
+     * @const
+     * @type {String}
+     */
+    CONTENT_LENGTH = 'Content-Length',
+
+    /**
+     * @private
+     * @const
+     * @type {string}
+     */
+    DEFAULT_RESPONSE_FILENAME = 'response',
+
+    /**
+     * @private
+     * @const
+     * @type {string}
+     */
+    UTF8 = 'utf8',
+
+    Response,
+
+    /**
+     * @private
+     * @const
+     * @type {string}
+     */
+    BUFFER = 'Buffer',
+
+    /**
+     * @private
+     * @const
+     * @type {string}
+     */
+    FUNCTION = 'function',
+
+    /**
+     * Normalises an input Buffer or buffer.toJSON() into a Buffer or ArrayBuffer.
+     * @private
+     * @param {Buffer|Object} stream - An instance of Buffer of an object representation of Buffer(Buffer.toJSON())
+     * @returns {Buffer|ArrayBuffer|undefined}
+     */
+    normaliseStream = function (stream) {
+        if (stream &amp;&amp; stream.type === BUFFER &amp;&amp; _.isArray(stream.data)) {
+            // @todo Add tests for Browser environments, where ArrayBuffer is returned instead of Buffer
+            return typeof Buffer === FUNCTION ? new Buffer(stream.data) : new Uint8Array(stream.data).buffer;
+        }
+        return stream;
+    };
+
+/**
+ * @typedef Response~definition
+ * @property {Number} code - define the response code
+ * @property {String=} [reason] - optionally, if the response has a non-standard response code reason, provide it here
+ * @property {Array&lt;Header~definition>} [header]
+ * @property {Array&lt;Cookie~definition>} [cookie]
+ * @property {String} [body]
+ * @property {Buffer|ByteArray} [stream]
+ * @property {Number} responseTime
+ *
+ * @todo pluralise `header`, `cookie`
+ */
+_.inherit((
+
+    /**
+     * Response holds data related to the request body. By default, it provides a nice wrapper for url-encoded,
+     * form-data, and raw types of request bodies.
+     *
+     * @constructor
+     * @extends {Property}
+     *
+     * @param {Response~definition} options
+     */
+    Response = function PostmanResponse (options) {
+        // this constructor is intended to inherit and as such the super constructor is required to be executed
+        Response.super_.apply(this, arguments);
+        this.update(options || {});
+    }), Property);
+
+_.assign(Response.prototype, /** @lends Response.prototype */ {
+    update: function (options) {
+        // options.stream accepts new Buffer() as well as new Buffer().toJSON()
+        var stream = normaliseStream(options.stream);
+        _.mergeDefined(this, /** @lends Response.prototype */ {
+            /**
+             * @type {Request}
+             */
+            originalRequest: options.originalRequest ? new Request(options.originalRequest) : undefined,
+
+            /**
+             * @type {String}
+             * @deprecated use .reason()
+             */
+            status: _.choose(options.reason, options.status, httpReasons.lookup(options.code).name),
+
+            /**
+             * @type {Number}
+             */
+            code: options.code,
+
+            /**
+             * @type {PropertyList&lt;Header>}
+             */
+            headers: new PropertyList(Header, this, options.header),
+
+            /**
+             * @type {String}
+             */
+            body: options.body,
+
+            /**
+             * @private
+             *
+             * @type {Buffer|UInt8Array}
+             */
+            stream: options.body &amp;&amp; !_.isString(options.body) &amp;&amp; _.isObject(options.body) ?
+                options.body : stream,
+
+            /**
+             * @type {PropertyList&lt;Cookie>}
+             */
+            cookies: new PropertyList(Cookie, this, options.cookie),
+
+            /**
+             * Time taken for the request to complete.
+             *
+             * @type {Number}
+             */
+            responseTime: options.responseTime,
+
+            /**
+             * @private
+             * @type {Number}
+             */
+            responseSize: stream &amp;&amp; stream.byteLength
+        });
+    }
+});
+
+_.assign(Response.prototype, /** @lends Response.prototype */ {
+    /**
+     * Defines that this property requires an ID field
+     * @private
+     * @readOnly
+     */
+    _postman_requiresId: true,
+
+    /**
+     * Get the http response reason phrase based on the current response code.
+     * @returns {String|undefined}
+     */
+    reason: function () {
+        return this.status || httpReasons.lookup(this.code).name;
+    },
+
+    /**
+     * Get the response body as a string/text.
+     * @returns {String|undefined}
+     */
+    text: function () {
+        return (this.stream ? util.bufferOrArrayBufferToString(this.stream, this.mime().charset) : this.body);
+    },
+
+    /**
+     * Get the response body as a JavaScript object. Note that it throws an error if the response is not a valid JSON
+     *
+     * @param {Function=} [reviver]
+     * @param {Boolean} [strict=false] Specify whether JSON parsing will be strict. This will fail on comments and BOM
+     * @example
+     * // assuming that the response is stored in a collection instance `myCollection`
+     * var response = myCollection.items.one('some request').responses.idx(0),
+     *     jsonBody;
+     * try {
+     *     jsonBody = response.json();
+     * }
+     * catch (e) {
+     *     console.log("There was an error parsing JSON ", e);
+     * }
+     * // log the root-level keys in the response JSON.
+     * console.log('All keys in json response: ' + Object.keys(json));
+     *
+     * @returns {Object}
+     */
+    json: function (reviver, strict) {
+        return LJSON.parse(this.text(), reviver, strict);
+    },
+
+    /**
+     * @private
+     *
+     * @param {String|Header} contentType - override the content-type of the response using this parameter before
+     * computing the mime  type.
+     * @param {String|Header} contentDisposition - override the content-disposition of the response before calculating
+     * mime info.
+     *
+     * @returns {Object}
+     *
+     * @note example object returned
+     * {
+     *   source: string // 'header', 'content', 'default' or 'forced'
+     *   type: normalised.type, // sanitised mime type base
+     *   format: normalised.format, // format specific to the type returned
+     *   name: DEFAULT_RESPONSE_FILENAME, // @todo - get from disposition
+     *   ext: mimeType.extension(normalised.source) || E, // file extension from sanitised content type
+     *   filename: name + ext,
+     *   // also storing some meta info for possible debugging
+     *   _originalContentType: type, // the user provided mime type
+     *   _sanitisedContentType: normalised.source, // sanitised mime type
+     *   _accuratelyDetected: !normalised.orphan // this being true implies worse case (raw render)
+     *   detected: {} // same as root object, but based on what is detected from content
+     * }
+     *
+     * @todo write unit tests
+     */
+    mime: function (contentType, contentDisposition) {
+        var detected = fileType(this.stream || this.body), // detect the mime from response body
+            source = 'forced',
+            mime;
+
+        // if no overrides provided, we take the values from headers
+        !contentDisposition &amp;&amp; (contentDisposition = this.headers.one('content-disposition'));
+        if (!contentType) {
+            contentType = this.headers.one('content-type') &amp;&amp; this.headers.one('content-type').value;
+            source = HEADER;
+        }
+
+        // if content type is not found in header, we fall back to the mime type detected
+        if (!contentType &amp;&amp; detected) {
+            contentType = detected.mime;
+            source = BODY;
+        }
+
+        // if still not found, then we use default text
+        if (!contentType) {
+            contentType = 'text/plain';
+            source = 'default';
+        }
+
+        mime = Response.mimeInfo(contentType, contentDisposition);
+        mime.source = source;
+        mime.detected = detected &amp;&amp; Response.mimeInfo(detected.mime, contentDisposition);
+
+        return mime;
+    },
+
+    /**
+     * Converts the response to a dataURI that can be used for storage or serialisation. The data URI is formed using
+     * the following syntax `data:&lt;content-type>;baseg4, &lt;base64-encoded-body>`.
+     *
+     * @returns {String}
+     * @todo write unit tests
+     */
+    dataURI: function () {
+        var mime = this.mime();
+
+        // if there is no mime detected, there is no accurate way to render this thing
+        if (!this.mime) {
+            return E;
+        }
+
+        // we create the body string first from stream and then fallback to body
+        return 'data:' + mime._sanitisedContentType + ';base64, ' + ((!_.isNil(this.stream) &amp;&amp;
+            util.bufferOrArrayBufferToBase64(this.stream)) || (!_.isNil(this.body) &amp;&amp; util.btoa(this.body)) || E);
+    },
+
+    /**
+     * Get the response size by computing the same from content length header or using the actual response body.
+     * @returns {Number}
+     * @todo write unit tests
+     */
+    size: function () {
+        var sizeInfo = {},
+            contentEncoding = Header.headerValue(this.headers, CONTENT_ENCODING),
+            contentLength = Header.headerValue(this.headers, CONTENT_LENGTH);
+
+        // if 'Content-Length' header is present and encoding is of type gzip/deflate
+        if (contentLength &amp;&amp; (/^(gzip|deflate)$/).test(contentEncoding) &amp;&amp; util.isNumeric(contentLength)) {
+            sizeInfo.body = _.parseInt(contentLength, 10);
+        }
+        // else size of body is added
+        else {
+            sizeInfo.body = this.stream ? this.stream.byteLength : (this.body &amp;&amp; this.body.length || 0);
+        }
+
+        // size of header is added
+        sizeInfo.header = Header.size(this.headers, this.code, this.reason());
+        return sizeInfo;
+    },
+
+    /**
+     * Returns the response encoding defined as header or detected from body
+     * @private
+     * @returns {Object} - {format: string, source: string}
+     */
+    encoding: function () {
+        var contentEncoding = Header.headerValue(this.headers, CONTENT_ENCODING),
+            body = this.stream || this.body,
+            source;
+
+        if (contentEncoding) {
+            source = HEADER;
+        }
+
+        // if the encoding is not found, we check
+        else if (body) { // @todo add detection for deflate
+            // eslint-disable-next-line lodash/prefer-matches
+            if (body[0] === 0x1F &amp;&amp; body[1] === 0x8B &amp;&amp; body[2] === 0x8) {
+                contentEncoding = GZIP;
+            }
+
+            if (contentEncoding) {
+                source = BODY;
+            }
+        }
+
+        return {
+            format: contentEncoding,
+            source: source
+        };
+    }
+});
+
+_.assign(Response, /** @lends Response */ {
+    /**
+     * Defines the name of this property for internal use.
+     * @private
+     * @readOnly
+     * @type {String}
+     */
+    _postman_propertyName: 'Response',
+
+    /**
+     * Converts the response object from the request module to the postman responseBody format
+     *
+     * @param {Object} response The response object, as received from the request module
+     * @returns {Object} The transformed responseBody
+     * @todo Add a key: `originalRequest` to the returned object as well, referring to response.request
+     */
+    createFromNode: function (response, cookies) {
+        return new Response({
+            cookie: cookies,
+            body: response.body.toString(),
+            stream: response.body,
+            header: response.headers,
+            code: response.statusCode,
+            status: response.statusMessage,
+            responseTime: response.elapsedTime
+        });
+    },
+
+    /**
+     * @private
+     *
+     * @param {String|Header} type
+     * @param {String|Header} disposition
+     * @returns {Object}
+     *
+     * @todo write unit tests
+     */
+    mimeInfo: function (type, disposition) {
+        Header.isHeader(type) &amp;&amp; (type = type.value);
+        Header.isHeader(disposition) &amp;&amp; (disposition = disposition.value);
+
+        // validate that the content type exists
+        if (!(type &amp;&amp; _.isString(type))) { return; }
+
+        var normalised = mimeFormat.lookup(type),
+            info = {};
+
+        _.assign(info, {
+            type: normalised.type, // sanitised mime type base
+            format: normalised.format, // format specific to the type returned
+            name: DEFAULT_RESPONSE_FILENAME, // @todo - get from disposition
+            ext: mimeType.extension(normalised.source) || E, // file extension from sanitised content type
+            charset: normalised.charset || UTF8,
+
+            // also storing some meta info for possible debugging
+            _originalContentType: type, // the user provided mime type
+            _sanitisedContentType: normalised.source, // sanitised mime type
+            _accuratelyDetected: !normalised.orphan // this being true implies worse case (raw render)
+        });
+
+        // build the file name from extension
+        info.filename = info.name;
+        info.ext &amp;&amp; (info.filename += (DOT + info.ext));
+
+        return info;
+    }
+});
+
+module.exports = {
+    Response: Response
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated at Thu Feb 16 2017 14:01:15 GMT+0000 (UTC)
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
